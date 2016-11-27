@@ -9,7 +9,7 @@
       input {width:300px; border-radius: 5px; height: 20px}
       button {margin: 20px; margin-left: 0; border-radius: 2px;
          background-color: orange; font-size: 0.6em; border-color: yellow;}
-      small { font-size: 0.5em; color: gray; }
+      small { font-size: 0.6em; color: gray; }
     </style>
     <title>Lunch Checker</title>
   </head>
@@ -18,7 +18,7 @@
     <div ng-controller="LunchCheckController">
       <div id='main'>
        <!-- Declaring ng-model="dishesStr" to bind input string with $scope.dishesStr -->
-       <input type="text" id="mainInput" placeholder="please enter coma-separated dishes" ng-model="dishesStr">
+       <input type="text" id="mainInput" placeholder="please enter coma-separated dishes" ng-model="dishesStr"><br>
        <small>please keep in mind that empty strings (", ,") will be considered like dish-record</small>  
       </div>
       <div>
