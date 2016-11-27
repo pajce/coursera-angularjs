@@ -1,29 +1,41 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html ng-app="LunchCheck">
   <head>
-    <title>Lunch Checker</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <meta charset="utf-8">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
     <style>
-      .message { font-size: 1.3em; font-weight: bold; }
+      body { font-size: 1.5em; font-family: "Serif" }
+      input {width:300px; border-radius: 5px; height: 20px}
+      button {margin: 20px; margin-left: 0; border-radius: 2px;
+         background-color: orange; font-size: 0.6em; border-color: yellow;}
     </style>
+    <title>Lunch Checker</title>
   </head>
-<body>
-   <div class="container">
-     <h1>Lunch Checker</h1>
+  <body >
+    <h2>Lunch checker</h2>
+    <div ng-controller="LunchCheckController">
+      <div id='main'>
+       <!-- Declaring ng-model="dishesStr" to bind input string with $scope.dishesStr -->
+       <input type="text" id="mainInput" placeholder="please enter coma-separated dishes" ng-model="dishesStr">
+      </div>
+      <div>
+       <!--Calling checkIfTooMuch() function when the button is clicked -->
+       <button id='mainButton' ng-click="checkIfTooMuch();">Check If Too Much</button>
+       {{message}} <!-- Displaying message-->
 
-         <div class="form-group">
-             <input id="lunch-menu" type="text"
-             placeholder="list comma separated dishes you usually have for lunch"
-             class="form-control">
-         </div>
-         <div class="form-group">
-             <button class="btn btn-default">Check If Too Much</button>
-         </div>
-         <div class="form-group message">
-           <!-- Your message can go here. -->
-         </div>
-   </div>
+       <script type="text/javascript">
+        var elem1 = document.getElementById('mainInput');
+        var elem2 = document.getElementById('mainInput').getAttribute('placeholder');
+        var elem3 = document.getElementById('mainButton');
+        var elem4 = document.getElementById('mainButton').getAttribute('ng-click');
+        console.log(elem1);
+        console.log(elem2);
+        console.log(elem3);
+        console.log(elem4);
+       </script>
+      </div>
+    </div>
 
-</body>
+  </body>
 </html>
