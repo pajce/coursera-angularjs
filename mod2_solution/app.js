@@ -29,7 +29,7 @@ function AlreadyBoughtController(ShoppingListCheckOffService) {
 function ShoppingListCheckOffService() {
   var service = this;
 
-  service.itemsToBuy = [
+  var itemsToBuy = [
     { name: "Chips", quantity: "10 bags" },
     { name: "Coca Cola", quantity: "5 bottles"},
     { name: "Chips", quantity: "7 bags" },
@@ -41,20 +41,20 @@ function ShoppingListCheckOffService() {
     { name: "Beer", quantity: "50 large bottles" }
   ] ;
 
-  service.boughtItems =[ ];
+ var boughtItems =[ ];
 
   service.buyItem = function (itemIndex) {
-    var item = service.itemsToBuy[itemIndex];
+    var item = itemsToBuy[itemIndex];
+    boughtItems.push(item);
     service.getBoughtItems();
-    service.boughtItems.push(item);
     service.removeItem();
 };
 
   service.removeItem = function (itemIndex) {
-    service.itemsToBuy.splice(itemIndex, 1);
+    itemsToBuy.splice(itemIndex, 1);
   }
   service.getItemsToBuy = function () {
-    return service.itemsToBuy;
+    return itemsToBuy;
   };
 
   service.getBoughtItems = function () {
