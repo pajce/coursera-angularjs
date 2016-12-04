@@ -45,8 +45,8 @@ function ShoppingListCheckOffService() {
 
   service.buyItem = function (itemIndex) {
     var item = service.itemsToBuy[itemIndex];
-    service.boughtItems.push(item);
     service.getBoughtItems();
+    service.boughtItems.push(item);
     service.removeItem();
 };
 
