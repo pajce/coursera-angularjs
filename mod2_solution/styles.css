@@ -1,0 +1,23 @@
+body {
+  font-size: 1.2em;
+}
+.list {
+  float: left;
+  margin: 20px;
+}
+
+.list button {
+  float:right;
+  margin-right: 30px;
+}
+
+.list2 {
+  float: left;
+  margin: 20px;
+  margin-left: 40px;
+  color: #5D5555;
+}
+
+.error {
+  color: red;
+}
