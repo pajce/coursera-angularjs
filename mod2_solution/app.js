@@ -30,15 +30,12 @@ function ShoppingListCheckOffService() {
   var service = this;
 
   var itemsToBuy = [
-    { name: "Chips", quantity: "10 bags" },
     { name: "Coca Cola", quantity: "5 bottles"},
     { name: "Chips", quantity: "7 bags" },
     { name: "Popcorn", quantity: "10 bags" },
-    { name: "Pizza", quantity: "5 rings" },
     { name: "Cookies", quantity: "15 pieces"  },
     { name: "Chocolate", quantity: "3 tables" },
-    { name: "Pepsi", quantity: "3 bottles" },
-    { name: "Beer", quantity: "50 large bottles" }
+    { name: "Pepsi", quantity: "3 bottles" }
   ] ;
 
  var boughtItems =[ ];
