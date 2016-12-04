@@ -55,7 +55,7 @@ function ShoppingListCheckOffService() {
   };
 
   service.getBoughtItems = function () {
-    return service.boughtItems;
+    return boughtItems;
   };
 }
 })();
